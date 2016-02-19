@@ -1,0 +1,15 @@
+<form (submit)="addMessage()">
+    <div class="input-group">
+        <input class="form-control" type="text" [(ngModel)]="userMessage" placeholder="Chat with the comforting rubber duck">
+        <span class="input-group-btn">
+            <button class="btn btn-primary" type="submit">
+                Submit
+            </button>
+        </span>
+    </div>
+</form>
+<div id="history-box" class="duck-history">
+    <div *ngFor="#message of messages">
+        <p [innerHTML]="message"></p>
+    </div>
+</div>
